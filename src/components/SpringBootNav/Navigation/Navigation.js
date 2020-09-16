@@ -2,7 +2,7 @@ import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 import TopNav from './TopNav/TopNav';
 import Logo from './Logo/Logo';
-import DropDowns from './DropDowns/NavItem';
+import DropDowns from './DropDowns/DropDowns';
 import classes from './Navigation.module.css';
 
 
