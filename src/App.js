@@ -1,19 +1,19 @@
 import React from 'react';
 import Navibar from './components/SpringBootNav/Navigation/Navigation';
 import './App.css';
+import Service from './serviceComponents/Services/VertStor';
+import ProdFill from './serviceComponents/Services/ProdFill';
+import Aux from './hoc/Auxiliary';
+
 
 function App() {
   return (
-    <div className="App">
+    <Aux>
+    <div >
       <Navibar/>
-        <header className="App-header">
-       
-          <h1 className="App-title">Welcome to Duologik</h1>
-        </header>
-        <p className="App-intro">
-          Simple React Web App
-        </p>
-    </div>
+    <Service/>
+  </div>
+  </Aux>
   );
 }
 

@@ -1,0 +1,86 @@
+.Service{
+    width: 60%;
+    margin-top: 150px;
+    margin-left: 20%;
+  text-align: center;
+}
+
+.Service p{
+
+    text-align: left;
+    
+
+}
+
+.Service li{
+    text-align: left;
+
+}
+
+
+
+
+.Service h4{
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: orangered;
+    text-align: center;
+
+}
+
+.Service h6{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: orangered;
+    font-weight: bold;
+    
+
+}
+
+.List {
+
+
+}
+
+.List li{
+
+    text-align: left;
+    color: orangered;
+
+}
+
+.List dl{
+
+    text-align: left;
+
+}
+
+@media (max-width: 648px) {
+.Service{
+    margin-top: 170px;
+    width: 65%;
+    margin-left: 17.5%;
+}
+}
+
+@media (max-width: 575px) {
+    .Service{
+        margin-top: 320px;
+        width: 70%;
+        margin-left: 15%;
+    }
+    }
+@media (max-width: 302px) {
+        .Service{
+            margin-top: 370px;
+            width: 75%;
+            margin-left: 12.5%;
+        }
+        }
+    
+
+
+
