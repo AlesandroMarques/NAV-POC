@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
-import PhoneImage from '../Logo/Phone';
-import LinkedImage from '../Logo/LinkedIn';
+import PhoneImage from '../Images/Phone';
+import LinkedImage from '../Images/LinkedIn';
 import classes from './TopNav.module.css';
 
 const topnav = () =>{
