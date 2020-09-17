@@ -1,8 +1,8 @@
 import React from 'react';
 import Navibar from './components/SpringBootNav/Navigation/Navigation';
 import './App.css';
-import Service from './serviceComponents/Services/VertStor';
-import ProdFill from './serviceComponents/Services/ProdFill';
+import Virtual_Storage from './serviceComponents/Services/IT_INFRUSTRUCTURE/Virtual_Storage';
+import ProdFill from './serviceComponents/Services/IT_INFRUSTRUCTURE/Product_Fulfillment';
 import Aux from './hoc/Auxiliary';
 
 
@@ -11,7 +11,7 @@ function App() {
     <Aux>
     <div >
       <Navibar/>
-    <Service/>
+    <ProdFill/>
   </div>
   </Aux>
   );
