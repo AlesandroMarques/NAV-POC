@@ -12,7 +12,6 @@ const dropdowns = (props) => {
         { props.dropDowns.map( dropdown => (
         <DropDown title={dropdown.name}  href={dropdown.href} dropDownItems={dropdown.dropDownItems}/>
         ))}
-        <ReactBootStrap.Nav />
         </ReactBootStrap.Nav>
     </ReactBootStrap.Navbar.Collapse>
 

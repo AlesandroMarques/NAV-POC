@@ -65,18 +65,12 @@
 
 @media (max-width: 575px) {
     .Service{
-        margin-top: 320px;
+        margin-top: 80px;
         width: 70%;
         margin-left: 15%;
     }
     }
-@media (max-width: 302px) {
-        .Service{
-            margin-top: 370px;
-            width: 75%;
-            margin-left: 12.5%;
-        }
-        }
+
     
 
 

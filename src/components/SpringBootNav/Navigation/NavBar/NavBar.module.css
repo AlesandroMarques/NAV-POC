@@ -1,13 +1,17 @@
-.TopNav{
+.NavBar{
     width: 100%;
-    top: 0;
-    left: 0;
     height: auto;
 }
 
 /*hide top nav at 575 pixels or less*/
 @media (max-width: 575px) {
-    .TopNav{
+    .NavBar{
         display: none;
     }
     }
+
+.ToggleSideBar{
+
+    height: 100%;
+}
+

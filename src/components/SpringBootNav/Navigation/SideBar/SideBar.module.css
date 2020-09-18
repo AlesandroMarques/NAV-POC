@@ -1,0 +1,72 @@
+.SideBar{
+    margin-top: 50px;
+    position: fixed;
+    width: 210px;
+    max-width: 70%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 200;
+    background-color: white;
+    padding:  32px 16px;
+    box-sizing: border-box;
+    transition: transfrom 0.3s ease-out;
+
+}
+
+.SideBar ul{
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    align-items: left;
+    height: 100%;
+    flex-flow: column;
+    color: black;
+
+
+
+}
+.SideBar a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: left;
+    height: 100%;
+    flex-flow: column;
+    color: black;
+
+
+
+}
+
+.SideBar a:hover{
+    color: orangered;
+
+
+
+}
+
+@media (min-width: 575px){
+    .SideBar{
+        display: none;
+    }
+}
+
+.Open{
+transform: translateX(0);
+
+}
+
+.Close{
+transform: translateX(-100%);
+
+}
+
+.Logo{
+
+    height: 10%;
+    
+    margin-bottom:20px;
+}

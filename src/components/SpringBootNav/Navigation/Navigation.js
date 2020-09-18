@@ -1,9 +1,8 @@
 import React , {Component} from 'react';
-import * as ReactBootStrap from "react-bootstrap";
 import TopNav from './TopNav/TopNav';
-import Logo from './Images/Logo';
-import DropDowns from './DropDowns/DropDowns';
 import classes from './Navigation.module.css';
+import NavBar from './NavBar/NavBar';
+import SideBar from './SideBar/SideBar';
 
 
 class Navigation extends Component  {
@@ -62,24 +61,37 @@ class Navigation extends Component  {
                                    {id:'digfu3', name:"ARCSERVE PRODUCTS & SERVICES" , href:"#dr/1.5"}
                                           ]}                 
 
-                  ]
+                  ],
           // add more and loop in DropDowns line we did in DropDown
 
+          showBackDrop:false,
+          showSideBar:false
+
   }
+
+   toggleBackDropHandler = () =>{
+   const showBackDrop2 = !this.state.showBackDrop;
+   const showSideBar2 = !this.state.showSideBar;
+   this.setState({showBackDrop:showBackDrop2, showSideBar:showSideBar2})
+
+}
 
 
   render(){
 
-    return (
-        <header className={classes.NavBar}>
-        <TopNav/>
-         <ReactBootStrap.Navbar collapseOnSelect expand="lg"variant="light" bg="light"  >
-         <Logo/>
-        <DropDowns dropDowns={this.state.dropdowns}/>
-        </ReactBootStrap.Navbar>
   
-        </header>
-      );}
+
+  
+
+      return (
+         <header className={classes.NavBar}>
+         <TopNav/>
+          <NavBar dropDowns={this.state.dropdowns} toggle={this.toggleBackDropHandler} />
+          <SideBar dropDowns={this.state.dropdowns} open={this.state.showSideBar} show={this.state.showBackDrop} toggle={this.toggleBackDropHandler}/>
+         </header>
+       );
+   
+   }
 }
 
 export default Navigation;
