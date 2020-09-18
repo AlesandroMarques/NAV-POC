@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../Service.module.css';
 
-const vertstor = (props) => {
+const service = (props) => {
 
 return (
     <div className={classes.Service} >
@@ -36,4 +36,4 @@ return (
 
 }
 
-export default vertstor;
+export default service;

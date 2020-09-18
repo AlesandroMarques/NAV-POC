@@ -12,10 +12,11 @@ return(
     <Aux>
     <div className={classes.ToggleSideBar}>
     <SideBarToggle clicked={props.toggle} />
+    <Logo/>
     </div>
     <div className={classes.NavBar}>
-         <ReactBootStrap.Navbar collapseOnSelect expand="lg"variant="light" bg="light"  >
-         <Logo/>
+         <ReactBootStrap.Navbar collapseOnSelect expand="lg"variant="light" bg="light" className="justify-content-left" >
+             <Logo/>
         <DropDowns dropDowns={props.dropDowns}/>
         </ReactBootStrap.Navbar>
     </div>
