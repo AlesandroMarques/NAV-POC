@@ -8,16 +8,17 @@ import All_Flash_Array from './serviceComponents/Services/IT_INFRUSTRUCTURE/All_
 import Converged_Inf from './serviceComponents/Services/IT_INFRUSTRUCTURE/Converged_Infrastructure';
 import Networking from './serviceComponents/Services/IT_INFRUSTRUCTURE/Networking';
 import Aux from './hoc/Auxiliary';
+import Layout from './hoc/Layout/Layout';
 
 
 function App() {
   return (
-    <Aux>
-    <div >
-      <Navibar/>
-    <Networking/>
-  </div>
-  </Aux>
+    <div>
+      <Layout>
+        <Virtual_Storage></Virtual_Storage>
+      </Layout>
+    </div>
+
   );
 }
 
