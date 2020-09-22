@@ -13,7 +13,7 @@ const DropDown = (props) => {
     <div>
     <ReactBootStrap.SplitButton variant="light" bg="light"  title={props.title} id="collasible-nav-dropdown" href={props.href}>
       {props.dropDownItems.map( item => (
-        <DropDownItem href={item.href} name={item.name}/>
+        <DropDownItem href={item.href} name={item.name} page={item.page} changePageHandler={props.changePageHandler}/>
       )
       )}
     </ReactBootStrap.SplitButton>

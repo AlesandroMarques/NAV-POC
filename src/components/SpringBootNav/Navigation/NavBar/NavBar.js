@@ -17,7 +17,7 @@ return(
     <div className={classes.NavBar}>
          <ReactBootStrap.Navbar collapseOnSelect expand="lg"variant="light" bg="light" className="justify-content-left" >
              <Logo/>
-        <DropDowns dropDowns={props.dropDowns}/>
+        <DropDowns dropDowns={props.dropDowns} changePageHandler={props.changePageHandler}/>
         </ReactBootStrap.Navbar>
     </div>
     </Aux>

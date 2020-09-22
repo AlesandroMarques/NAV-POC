@@ -9,10 +9,17 @@ import Layout from './hoc/Layout/Layout';
 
 
 function App() {
-  return (
+  /*return (
     <div>
       <Layout>
         <PageController></PageController>
+      </Layout>
+    </div>
+
+  );*/
+  return (
+    <div>
+      <Layout>
       </Layout>
     </div>
 
