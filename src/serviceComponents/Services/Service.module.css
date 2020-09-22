@@ -29,6 +29,15 @@
     text-align: center;
 
 }
+.Service h5{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: orangered;
+    font-weight: bold;
+    
+
+}
 
 .Service h6{
     padding-top: 10px;
@@ -40,6 +49,13 @@
 
 }
 
+
+.Service img{
+
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 
 .List li{
