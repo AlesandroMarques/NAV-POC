@@ -29,6 +29,8 @@ import DRaaS from '../../serviceComponents/Services/DISASTER_RECOVERY/DRaaS';
 import Managed_Backup from '../../serviceComponents/Services/DISASTER_RECOVERY/Managed_Backup'
 import Arcserve from '../../serviceComponents/Services/DISASTER_RECOVERY/Arcserve';
 
+import Footer from '../../footerComponents/footerNav';
+
 import classes from './Layout.module.css';
 import Aux from '../Auxiliary';
 
@@ -71,7 +73,66 @@ class Layout extends Component  {
 
 
         
-    ]
+    ],
+    dropdowns:[
+      {nameUp: 'IT INFRUSTRCTURE',
+      name:' IT Infrustructure',
+      href: '#iti',
+          dropDownItems:[
+             {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage"},
+             {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage"},
+             {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array"},
+            {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure"},
+             {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment"},
+             {id:'cki8e', nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking"},
+             {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
+            ]
+            },
+
+            {nameUp: 'CLOUD',
+            name:'Cloud',
+            href: '#cloud',
+                dropDownItems:[
+                   {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud"},
+                   {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup"},
+                   {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas"},
+                   {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
+                ]},
+
+            {nameUp: 'IT SERVICES',
+            name:'IT Services',
+            href: '#its',
+                  dropDownItems:[
+                       {id:'fhyr75', nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services"},
+                       {id:'d8hskf', nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment"},
+                       {id:'dubwtr', nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting"}
+                    ]},
+
+              {nameUp: 'MANAGED SERVICES',
+              name:'Managed Services',
+                href: '#ms',
+                   dropDownItems:[
+                           {id:'qwdr', nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server"},
+                           {id:'vbft', nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support"},
+                           {id:'ukgt', nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring"},
+                           {id:'ukht', nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring"},
+                           {id:'fgdr', nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect"}
+                        ]}  
+                        ,
+
+              {nameUp: 'DISASTER RECOVERY',
+              name:'Disaster Recovery',
+              href: '#dr',
+                  dropDownItems:[
+                           {id:'45sdrf', nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr"},
+                           {id:'45dufg', nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning"},
+                           {id:'dy7fhw', nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas"},
+                           {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup"},
+                           {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4",page:"managed_backup"},
+                           {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve"}
+                                  ]}                 
+
+          ]
 
 }
 
@@ -113,7 +174,7 @@ render(){
 
       return (  
         <Aux>
-              <Navibar changePageHandler={this.changePageHandler}/>
+              <Navibar dropDowns={this.state.dropdowns} changePageHandler={this.changePageHandler}/>
             <main className={classes.Layout}>
             {this.state.pages.map( item => {
             if(item.show){
@@ -121,6 +182,7 @@ render(){
         }
         )}
             </main>  
+            <Footer changePageHandler={this.changePageHandler} dropDowns={this.state.dropdowns}></Footer>
           </Aux>);
 }
 }

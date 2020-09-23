@@ -16,7 +16,7 @@
     background-color: black;
 }
 
-@media (min-width: 575px) {
+@media (min-width: 655px) {
     .SideBarToggle {
         display: none;
     }

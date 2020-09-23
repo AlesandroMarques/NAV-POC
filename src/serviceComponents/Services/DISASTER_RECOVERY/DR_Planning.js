@@ -6,7 +6,7 @@ const service = (props) => {
 
 return (
     <div className={classes.Service} >
-    <h4>DR Planning</h4>
+    <h4>Disaster Recovery Planning</h4>
     <p>Our specialists have the capabilities to help you create a DR strategy to keep your systems safe, accessible, recoverable
          and meet compliance obligations.  They will restore your most critical applications in our state of the art data centre
           recovering you from IT outages should a disaster strike.  </p>

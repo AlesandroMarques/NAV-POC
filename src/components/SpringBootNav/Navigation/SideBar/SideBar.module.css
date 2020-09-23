@@ -48,7 +48,7 @@
 
 }
 
-@media (min-width: 575px){
+@media (min-width: 655px){
     .SideBar{
         display: none;
     }

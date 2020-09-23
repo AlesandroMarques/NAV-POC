@@ -6,7 +6,7 @@
 }
 
 /*hide top nav at 575 pixels or less*/
-@media (max-width: 575px) {
+@media (max-width: 655px) {
     .TopNav{
         display: none;
     }

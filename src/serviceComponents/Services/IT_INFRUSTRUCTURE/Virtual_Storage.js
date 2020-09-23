@@ -5,7 +5,7 @@ const service = (props) => {
 
 return (
     <div className={classes.Service} >
-    <h4>VIRTUALIZATION & STORAGE</h4>
+    <h4>Virtualization & Storage</h4>
     <p>Duologik offers server virtualization and shared storage 
         solutions that put your organization in an ideal position 
         for future growth. Server virtualization prevents server sprawl, 
