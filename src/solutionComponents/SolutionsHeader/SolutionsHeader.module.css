@@ -1,0 +1,48 @@
+.Solution{
+    
+    color:white;
+}
+
+
+.Solution h1{
+    position: absolute;
+    top: 350px;
+    left: 200px;
+    font-weight: bold;
+   /* color:white;*/
+
+}
+.Solution h4{
+    position: absolute;
+    top: 425px;
+    left: 200px;
+    font-weight: bold;
+   /* color:white;*/
+
+}
+
+
+
+
+  .backgroundImage{margin-top: 125px;
+    background-size : cover;
+     width:100%;
+      /*height:700px;*/
+      height:30%;
+
+  }
+
+  @media(max-width:595px){
+
+    .Solution h1{
+        top: 250px;
+        left: 100px;
+    
+    }
+    .Solution h4{
+        top: 325px;
+        left: 100px;
+    
+    }
+
+  }

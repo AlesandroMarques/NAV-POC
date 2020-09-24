@@ -17,6 +17,12 @@
     
 
 }
+.column div{
+    float: left;
+    width: 50%;
+    
+
+}
 
 .column h6{
     font-weight: bold;
@@ -39,3 +45,13 @@
     align-items: left;
 }
 
+
+@media(max-width:802px){
+    .column div{
+        float: left;
+        width: 100%;
+        
+    
+    }
+    
+}

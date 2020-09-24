@@ -1,6 +1,7 @@
 import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
-import linkedInImage from '../../../../assets/linkedIn.png';
+//import linkedInImage from '../../../../assets/linkedIn.png';
+import linkedInImage from '../../../../assets/linkedin2.png';
 
 const linkedin = () =>{
 

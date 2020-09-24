@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './footerInfo.module.css';
 import PhoneImage from "../../components/SpringBootNav/Navigation/Images/Phone";
 import LinkedImage from "../../components/SpringBootNav/Navigation/Images/LinkedIn";
+import FacebookImage from "../../components/SpringBootNav/Navigation/Images/Facebook";
 
 const footerInfo = () =>{
 
@@ -21,7 +22,8 @@ const footerInfo = () =>{
             </div>
             <div className={classes.column}>
             <h6>SOCIAL NETWORKS:</h6>
-            <p><LinkedImage/></p>
+            <div> <LinkedImage/> <FacebookImage/></div>
+            
             </div>
 
 
