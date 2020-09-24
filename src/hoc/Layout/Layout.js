@@ -96,6 +96,7 @@ class Layout extends Component  {
                    {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud"},
                    {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup"},
                    {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas"},
+      
                    {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
                 ]},
 
