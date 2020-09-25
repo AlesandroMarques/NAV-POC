@@ -1,0 +1,25 @@
+.ServiceInfo{
+    text-align: left;
+
+}
+
+.ServiceInfo h6{
+    color: orangered;
+    font-weight: bold;
+}
+
+.ServiceInfo h5{
+    color: orangered;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.ServiceInfo button{
+   margin-bottom: 15px;
+
+}
+
+.ServiceInfo button:hover{
+    
+    color: orangered;
+ }

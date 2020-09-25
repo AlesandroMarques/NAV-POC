@@ -14,7 +14,7 @@ const footer = (props) =>{
         <Aux>
         <div className={classes.Footer}>
             { props.dropDowns.map( dropdown => (
-        <FooterColumn title={dropdown.name}  href={dropdown.href} dropDownItems={dropdown.dropDownItems} changePageHandler={props.changePageHandler}/>
+        <FooterColumn title={dropdown.name}  href={dropdown.href} page={dropdown.page} dropDownItems={dropdown.dropDownItems} changePageHandler={props.changePageHandler}/>
         ))}
         
         </div>

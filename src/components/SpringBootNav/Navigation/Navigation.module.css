@@ -7,11 +7,13 @@
     border-color:orangered;
     border-width: 1px;
     border-style: solid;
+    z-index: 125;
 }
 
 @media(max-width:655px){
     .NavBar{
-        height:50px;}
+        height:50px;
+        z-index: 50;}
 
 }
 

@@ -1,6 +1,6 @@
 .Solution{
     
-    color:white;
+    color:orangered;
 }
 
 
@@ -17,9 +17,12 @@
     top: 425px;
     left: 200px;
     font-weight: bold;
+    text-align: left;
    /* color:white;*/
 
 }
+
+
 
 
 
@@ -28,20 +31,42 @@
     background-size : cover;
      width:100%;
       /*height:700px;*/
-      height:30%;
+      /*height:10%;*/
+
+  }
+
+
+
+  @media(max-width:655px){
+    .backgroundImage{
+        margin-top: 50px;
+        
+    
+      }
+
+      .Solution h1{
+        top: 175px;
+        left: 75px;
+    
+    }
+    .Solution h4{
+        top: 275px;
+        left: 75px;
+    
+    }
 
   }
 
   @media(max-width:595px){
 
     .Solution h1{
-        top: 250px;
-        left: 100px;
+        top: 175px;
+        left: 75px;
     
     }
     .Solution h4{
-        top: 325px;
-        left: 100px;
+        top: 275px;
+        left: 75px;
     
     }
 

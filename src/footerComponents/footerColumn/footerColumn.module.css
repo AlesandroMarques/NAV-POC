@@ -34,6 +34,19 @@
 
 }
 
+.column h6 a{
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.column h6 a:hover{
+    color:orangered;
+    cursor: pointer;
+
+}
+
+
 
 
 .column li{
@@ -61,6 +74,24 @@
     cursor: pointer;
 
 }
+
+.column p a{
+    color: black;
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 13px;
+    font-family: masso;
+
+}
+
+.column p a:hover{
+    color: orangered;
+    cursor: pointer;
+    text-align: left;
+
+}
+
 
 @media(max-width:999px){
     .column{

@@ -4,7 +4,7 @@ const footerItem = (props) =>{
 
 
     return(
-    <p href={props.href} onClick={() => props.changePageHandler(props.page)}>{props.name}</p>
+    <p><a href={props.href} onClick={() => props.changePageHandler(props.page)}>{props.name}</a></p>
 
     );
 }

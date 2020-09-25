@@ -8,7 +8,7 @@ const footerColumn = (props) =>{
     return(
 
          <div className={classes.column}>
-                <h6>{props.title}</h6>
+                <h6><a href={props.href} onClick={() => props.changePageHandler(props.page)}>{props.title}</a></h6>
                 {props.dropDownItems.map( item => (
         <FooterItem href={item.href} name={item.name} page={item.page} changePageHandler={props.changePageHandler}/>
                 ))}

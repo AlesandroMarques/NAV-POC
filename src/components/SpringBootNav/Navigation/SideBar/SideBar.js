@@ -22,7 +22,7 @@ const sidebar = (props) => {
                  <nav>
                     <ul>
                         <li>
-                            <a href="#home">Home</a>
+                            <a href="#home" >Home</a>
                         </li>
                         <li>
                             <a href="#resources">Resources</a>
@@ -38,7 +38,7 @@ const sidebar = (props) => {
                     <ul>
                        {props.dropDowns.map(item => (
                            <li>
-                               <a href ={item.href}>{item.name}</a>
+                               <a href ={item.href} onClick={() => props.changePageHandler(item.page)}>{item.name}</a>
                            </li>
 
                        )
