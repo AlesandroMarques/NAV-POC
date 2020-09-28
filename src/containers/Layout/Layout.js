@@ -35,12 +35,41 @@ import classes from './Layout.module.css';
 import Aux from '../../hoc/Auxiliary';
 
 import SolutionsController from '../../solutionComponents/SolutionsController'
-import iti_image from '../../assets/Solutions/it_inf.jpg';
-import cloud_image from '../../assets/Solutions/cloud.jpg';
-import its_image from '../../assets/Solutions/it_services2.jpg';
-import ms_image from '../../assets/Solutions/managed_services.jpg';
-import dr_image from '../../assets/Solutions/dr.jpg';
+import iti_image from '../../assets/Solutions/it_inf2.jpg';
+import cloud_image from '../../assets/Solutions/cloud2.jpg';
+import its_image from '../../assets/Solutions/it_services3.jpg';
+import ms_image from '../../assets/Solutions/managed_services2.jpg';
+import dr_image from '../../assets/Solutions/dr2.jpg';
 
+
+const SERVICE_INFO = new Map()
+SERVICE_INFO.set('dr' ,"What if your critical servers go down today, how long will it take for you to get back online? Do you have the resource to recover your servers quickly? Unexpected disruptions can severely affect your operations, resulting in lost revenue and unhappy customers. Duologik cost-effective Disaster Recovery solution gets you up and running in minutes or hours")
+SERVICE_INFO.set('dr_planning' ,"Our specialists have the capabilities to help you create a DR strategy to keep your systems safe, accessible, recoverable and meet compliance obligations.  They will restore your most critical applications in our state of the art data centre recovering you from IT outages should a disaster strike.")
+SERVICE_INFO.set('draas' ,"Your data is essential to running your business, downtime is not an option. With all the high demands placed on your team, you cannot always prioritize the time, energy and budget required to handle a complete and reliable Disaster Recovery (DR) undertaking.")
+SERVICE_INFO.set('cloud_backup' ,"Organizations have traditionally implemented proper Disaster Recovery (DR) practice by writing backups to tape and shipping them offsite.  This is a costly and complex system owing to hardware and personnel requirements. Duologik’s Cloud backup system eliminates these requirements ensuring backups are secure and up-to-date.")
+SERVICE_INFO.set('managed_backup' ,"Your data is your business. Whether you’re a small business or a large enterprise you can depend on us to help you recover quickly after an accidental file deletion, hardware failure, virus or any other unforeseen event. Take protective measures now to ensure your data is safe.")
+SERVICE_INFO.set('arcserve' ,"Arcserve Unified Data Protection (UDP) combines enterprise-ready technologies into an all-in-one solution that delivers every data protection capability businesses need, without the complexity of traditional enterprise solutions. Powered by heterogeneous, image based technology that protects to and from any target, it eliminates the need for discrete products.")
+
+SERVICE_INFO.set('iaas' ,"Duologik’s competitive, on-demand Infrastructure as a Service (IaaS) with instant provision of services essentially simplifies data center complexity and improve customers’ ability to deliver their unpredictable computing requirement in a rapid and cost-effective manner.")
+SERVICE_INFO.set('virtual_storage' ,"Duologik offers server virtualization and shared storage solutions that put your organization in an ideal position for future growth. Server virtualization prevents server sprawl, leading to poor hardware resource utilization, possible breach in software security and high electricity and cooling costs.  Stop technology wastage, increase your availability and manage your cost.")
+SERVICE_INFO.set('hp_storage' ,"Looking to consolidate onto an enterprise-class flash array without compromising performance, scalability, data services, or resiliency? With unmatched versatility, performance, and density, HPE 3PAR Storage has you covered. Duologik is an HPE enterprise fully certified and service authorized reseller for 3 PAR technology.")
+SERVICE_INFO.set('all_flash_array' ,"As the world steams along its path toward a digital economy and businesses transition from datadependent to data-driven, the demands placed on storage performance continue to escalate. With performance increasing at less than one-third the rate of capacity, disk technology, the foundation of non-human memory and the workhorse of the datacentre, seems to be headed out to a much-deserved pasture.")
+SERVICE_INFO.set('converged_infrastructure' ,"You want to deploy applications faster. You want to deliver IT capacity to your business and services to your customers more quickly and easily. And you want a shorter time-to-value for IT investments. Virtualization is a well-understood technology that can help you increase agility, reduce costs, and simplify IT management. But virtualization is not ”just another technology.”")
+SERVICE_INFO.set('product_fulfillment' ,"Duologik’s IT procurement services enable customers to source, warehouse, configure, test and ship hardware and software nationally.  We work with your budget to meet the specification, brand quality and delivery schedules for successful project deployments.  Our team negotiates directly with vendors for the best possible prices")
+SERVICE_INFO.set('networking',"With the explosion of employees bringing their own devices to the office, you can see the benefits of implementing wireless and wired networks into your organization. To maintain productivity, it is important for employees to have access to the corporate network by giving them wireless access from their own devices.")
+
+SERVICE_INFO.set('private_cloud',"We incorporate proven elastic cloud infrastructure and our decades of managed operations experience delivering a secure, private, custom solution addressing the most demanding businesses challenges. ")
+SERVICE_INFO.set('saas',"Increasing employee productivity with available technology has never been easier and it can be made possible with low-cost investment, and high flexibility. Explore how Duologik’s Software as a Service (SaaS) unlocks the potential of workers, empowers business managers and enables CEOs to make informed decisions in real time with faster technology deployment")
+
+SERVICE_INFO.set('professional_services',"Duologik Infrastructure Consulting Services takes a holistic, adaptive approach that simplifies the IT modernization process. Equally important, we help prepare your people, processes and organization for change. You get more agility, lower costs and greater flexibility to better pursue your business goals. ")
+SERVICE_INFO.set('data_managment',"In order to stay competitive organization’s success relies heavily on its ability to manage its information. You need fast access to your data in a cost effective manner. Data management involves more than the technology. A holistic approach coordinates people, business process, and technological innovation.")
+SERVICE_INFO.set('troubleshooting',"We solve common problems, errors and have a framework to systemically drill down in intense deliberation for complex uncertainties. Sources of intractable problems can be uncovered and fixed in our ISO lab testing environment.")
+
+SERVICE_INFO.set('desktop_server',"Duologik provides desktop and server and management services to support your end users with their PC and local devices needs, i.e. smartphones, tablets, scanners, and printers. We work with you to understand and choose the best service option that suits your business needs")
+SERVICE_INFO.set('remote_support',"Our remote support objective is to resolve incidents quickly with the use of sophisticated industry standard tools and process.  Services around the clock ranges from level 1: basic help desk to level 3: advanced support engineers who can help with pressing issues, including problem diagnosis and remediation.")
+SERVICE_INFO.set('advanced_monitoring',"Duologik Advanced Monitoring service tracks the leading indicators in your infrastructure such as: device CPU utilization, capacity and memory utilization, including device and server availability. You can rest assured if an issue arises, you will get the notifications you need to effectively maintain your IT performance.")
+SERVICE_INFO.set('onsite_monitoring',"Duologik has the required knowledge and expertise to work with you on supporting your infrastructure and specific business applications.  You will be assigned an experienced engineer, committed to managing and maintaining your competitive, modern IT environment. Regular scheduled visits will be tailored to your specific needs and budget.")
+SERVICE_INFO.set('protect',"Network security is a top priority for any organization in today’s uncertain IT environment. Threats to your system and data can severely impede business innovation, limit productivity and damage compliance efforts. Duologik’s network security services provide organizations preemptive threat measures, protect your operating environment, and monitor suspicious activity.")
 
 const DROPDOWNS=[
   { page:"iti",
@@ -50,13 +79,13 @@ const DROPDOWNS=[
   des:"GIVE YOUR DATACENTRE EXPERT ATTENTION",
   img:iti_image,
       dropDownItems:[
-         {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage"},
-         {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage"},
-         {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array"},
-        {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure"},
-         {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment"},
-         {id:'cki8e', nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking"},
-         {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
+         {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage",info: SERVICE_INFO.get("virtual_storage")},
+         {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage",info: SERVICE_INFO.get("hp_storage")},
+         {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array",info: SERVICE_INFO.get("all_flash_array")},
+        {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure",info: SERVICE_INFO.get("converged_infrastructure")},
+         {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment",info: SERVICE_INFO.get("product_fulfillment")},
+         {id:'cki8e', nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking",info: SERVICE_INFO.get("networking")},
+         {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
         ]
         },
 
@@ -67,11 +96,10 @@ const DROPDOWNS=[
         des:"INFRASTRUCTURE FOR GROWTH AND FLEXIBILITY",
         img:cloud_image,
             dropDownItems:[
-               {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud"},
-               {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup"},
-               {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas"},
-  
-               {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
+               {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud",info: SERVICE_INFO.get("private_cloud")},
+               {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
+               {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas",info: SERVICE_INFO.get("saas")},
+               {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
             ]},
 
         {page:"its",
@@ -81,9 +109,9 @@ const DROPDOWNS=[
         des:"SOLVING COMPLEX BUSINESS PROBLEMS WITH IT SOLUTIONS",
         img:its_image,
               dropDownItems:[
-                   {id:'fhyr75', nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services"},
-                   {id:'d8hskf', nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment"},
-                   {id:'dubwtr', nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting"}
+                   {id:'fhyr75', nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services",info: SERVICE_INFO.get("professional_services")},
+                   {id:'d8hskf', nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment",info: SERVICE_INFO.get("data_managment")},
+                   {id:'dubwtr', nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting",info: SERVICE_INFO.get("troubleshooting")}
                 ]},
 
           {page:"ms",
@@ -93,11 +121,11 @@ const DROPDOWNS=[
             des:"BRING YOUR BACKUP AND RECOVERY PLANS UP TO SPEED",
             img:ms_image,
                dropDownItems:[
-                       {id:'qwdr', nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server"},
-                       {id:'vbft', nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support"},
-                       {id:'ukgt', nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring"},
-                       {id:'ukht', nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring"},
-                       {id:'fgdr', nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect"}
+                       {id:'qwdr', nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server",info: SERVICE_INFO.get("desktop_server")},
+                       {id:'vbft', nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support",info: SERVICE_INFO.get("remote_support")},
+                       {id:'ukgt', nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring",info: SERVICE_INFO.get("advanced_monitoring")},
+                       {id:'ukht', nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring",info: SERVICE_INFO.get("onsite_monitoring")},
+                       {id:'fgdr', nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect",info: SERVICE_INFO.get("protect")}
                     ]}  
                     ,
 
@@ -108,15 +136,17 @@ const DROPDOWNS=[
           des:"PROACTIVE PROTECTION FOR YOUR ENTIRE ORGANIZATION",
           img:dr_image,
               dropDownItems:[
-                {id:'45sdrf', nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr", info:"What if your critical servers go down today, how long will it take for you to get back online? Do you have the resource to recover your servers quickly? "},
-                {id:'45dufg', nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning", info:"Our specialists have the capabilities to help you create a DR strategy to keep your systems safe, accessible,"},
-                {id:'dy7fhw', nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas",info:"Your data is essential to running your business, downtime is not an option. With all the high demands placed on your team,"},
-                {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup",info:"Organizations have traditionally implemented proper Disaster Recovery (DR) practice by writing backups to tape and shipping them offsite."},
-                {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4",page:"managed_backup",info:"Your data is your business. Whether you’re a small business or a large enterprise you can depend on us to help you recover quickly after an accidental file deletion,"},
-                {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info:""}
+                {id:'45sdrf', nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr", info: SERVICE_INFO.get("dr")},
+                {id:'45dufg', nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning", info: SERVICE_INFO.get("dr_planning")},
+                {id:'dy7fhw', nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas",info: SERVICE_INFO.get("draas")},
+                {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
+                {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4", page:"managed_backup",info: SERVICE_INFO.get("managed_backup")},
+                {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info: SERVICE_INFO.get("arcserve")}
                               ]}                 
 
       ]
+
+     
 
 class Layout extends Component  {
 
@@ -175,69 +205,6 @@ class Layout extends Component  {
     ],
     showBackDrop:false,
     showSideBar:false
-    
-    /*,
-    dropdowns:[
-      {nameUp: 'IT INFRUSTRCTURE',
-      name:' IT Infrustructure',
-      href: '#iti',
-          dropDownItems:[
-             {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage"},
-             {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage"},
-             {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array"},
-            {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure"},
-             {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment"},
-             {id:'cki8e', nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking"},
-             {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
-            ]
-            },
-
-            {nameUp: 'CLOUD',
-            name:'Cloud',
-            href: '#cloud',
-                dropDownItems:[
-                   {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud"},
-                   {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup"},
-                   {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas"},
-      
-                   {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas"}
-                ]},
-
-            {nameUp: 'IT SERVICES',
-            name:'IT Services',
-            href: '#its',
-                  dropDownItems:[
-                       {id:'fhyr75', nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services"},
-                       {id:'d8hskf', nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment"},
-                       {id:'dubwtr', nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting"}
-                    ]},
-
-              {nameUp: 'MANAGED SERVICES',
-              name:'Managed Services',
-                href: '#ms',
-                   dropDownItems:[
-                           {id:'qwdr', nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server"},
-                           {id:'vbft', nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support"},
-                           {id:'ukgt', nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring"},
-                           {id:'ukht', nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring"},
-                           {id:'fgdr', nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect"}
-                        ]}  
-                        ,
-
-              {nameUp: 'DISASTER RECOVERY',
-              name:'Disaster Recovery',
-              href: '#dr',
-                  dropDownItems:[
-                           {id:'45sdrf', nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr"},
-                           {id:'45dufg', nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning"},
-                           {id:'dy7fhw', nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas"},
-                           {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup"},
-                           {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4",page:"managed_backup"},
-                           {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve"}
-                                  ]}                 
-
-          ]*/
-
 }
 
 toggleBackDropHandler = () =>{
@@ -278,14 +245,7 @@ changePageHandler =(pageName) =>{
 render(){
 
 
- /* return (  
-    <Aux>
-          <Navibar dropDowns={DROPDOWNS} changePageHandler={this.changePageHandler} showBackDrop={this.state.showBackDrop} showSideBar={this.state.showSideBar} toggleBackDropHandler={this.toggleBackDropHandler} />
-        <main className={classes.Layout}>
-        <TestSoltuion />
-        </main>  
-        <Footer changePageHandler={this.changePageHandler} dropDowns={DROPDOWNS}></Footer>
-      </Aux>);*/
+
 
      return (  
         <Aux>

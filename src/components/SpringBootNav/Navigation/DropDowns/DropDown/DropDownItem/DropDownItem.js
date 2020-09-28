@@ -5,7 +5,7 @@ const dropdownitem = (props) => {
 
     return(
         <div>
-             <ReactBootStrap.NavDropdown.Item variant="light" bg="light" style={{color:"orangered"}} href={props.href}  onClick={() => props.changePageHandler(props.page)} >{props.name}</ReactBootStrap.NavDropdown.Item>
+             <ReactBootStrap.NavDropdown.Item variant="light" bg="light" style={{color:"#ec1f2e"}} href={props.href}  onClick={() => props.changePageHandler(props.page)} >{props.name}</ReactBootStrap.NavDropdown.Item>
         </div>
     );
 

@@ -1,5 +1,7 @@
 .SolutionsController{
     width: 60%;
     margin-left: 20%;
+    transition-duration: 1s;
+  transition-delay: 1s;
   
 }

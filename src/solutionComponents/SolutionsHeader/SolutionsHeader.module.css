@@ -1,6 +1,13 @@
 .Solution{
     
-    color:orangered;
+    color:white;
+    
+   
+}
+/*fade in text , also cause picture sometimes takes a second to load*/
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
 }
 
 
@@ -9,6 +16,10 @@
     top: 350px;
     left: 200px;
     font-weight: bold;
+    animation: fadein 2s;
+
+    
+    
    /* color:white;*/
 
 }
@@ -18,6 +29,7 @@
     left: 200px;
     font-weight: bold;
     text-align: left;
+    animation: fadein 3s;
    /* color:white;*/
 
 }
@@ -28,12 +40,29 @@
 
 
   .backgroundImage{margin-top: 125px;
-    background-size : cover;
+    background-size :cover;
      width:100%;
       /*height:700px;*/
       /*height:10%;*/
+      
+    
 
   }
+  @media(max-width:991px){
+
+      .Solution h1{
+        top: 225px;
+        left: 125px;
+    
+    }
+    .Solution h4{
+        top: 300px;
+        left: 125px;
+    
+    }
+
+  }
+
 
 
 
@@ -45,12 +74,12 @@
       }
 
       .Solution h1{
-        top: 175px;
+        top: 125px;
         left: 75px;
     
     }
     .Solution h4{
-        top: 275px;
+        top: 200px;
         left: 75px;
     
     }
@@ -60,12 +89,12 @@
   @media(max-width:595px){
 
     .Solution h1{
-        top: 175px;
+        top: 125px;
         left: 75px;
     
     }
     .Solution h4{
-        top: 275px;
+        top: 200px;
         left: 75px;
     
     }

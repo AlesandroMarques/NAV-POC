@@ -10,7 +10,7 @@ const serviceInfo = (props) =>{
 <h5>{props.name}</h5>
 <p>{props.info}</p>
 <ReactBootStrap.Nav  variant="light"  >
-        <ReactBootStrap.Button variant="light" bg="light" style={{color:"orangered"}} href={props.href} onClick={() => props.clicked(props.page)}>Read More</ReactBootStrap.Button>
+        <ReactBootStrap.Button variant="light" bg="light" style={{color:"#ec1f2e"}} href={props.href} onClick={() => props.clicked(props.page)}>Read More</ReactBootStrap.Button>
 </ReactBootStrap.Nav>
 </div>
     );

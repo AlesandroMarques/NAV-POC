@@ -4,12 +4,14 @@
 }
 
 .ServiceInfo h6{
-    color: orangered;
+    /*color: orangered;*/
+    color: 	#ec1f2e;
     font-weight: bold;
 }
 
 .ServiceInfo h5{
-    color: orangered;
+    /*color: orangered;*/
+    color: 	#ec1f2e;
     font-weight: bold;
     margin-top: 15px;
 }
@@ -21,5 +23,6 @@
 
 .ServiceInfo button:hover{
     
-    color: orangered;
+   /* color: orangered;*/
+   color:	#ec1f2e;
  }

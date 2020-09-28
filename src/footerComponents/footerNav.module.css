@@ -30,7 +30,7 @@
 }
 
 .column h6:hover{
-    color:orangered;
+    color:	#ec1f2e;
     cursor: pointer;
 
 }
@@ -43,7 +43,7 @@
 }
 
 .column li:hover{
-    color: orangered;
+    color: 	#ec1f2e;
 
 }
 
@@ -58,7 +58,7 @@
 }
 
 .column p:hover{
-    color: orangered;
+    color: 	#ec1f2e;
     cursor: pointer;
 
 }
