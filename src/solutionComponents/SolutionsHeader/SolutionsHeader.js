@@ -6,11 +6,7 @@ import classes from './SolutionsHeader.module.css'
 
 const testSolutions =(props) =>{
 
-     /* let cssChoice = classes.Solution;
-      if(props.sidebar){
-        cssChoice = classes.Solution2;
-      }*/
-
+    
    
       
         return (

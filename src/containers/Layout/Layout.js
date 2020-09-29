@@ -262,6 +262,7 @@ render(){
               }
               else{
             return(item.output );}}
+            else{return null;}
         }
         )}
             </main>  
