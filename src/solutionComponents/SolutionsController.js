@@ -1,7 +1,7 @@
 import React from 'react';
 import SolutionsHeader from './SolutionsHeader/SolutionsHeader';
 import SolutionsContent from './SolutionsContent/SolutionsContent';
-import classes from './SolutionsController.module.css';
+//import classes from './SolutionsController.module.css';
 
 
 

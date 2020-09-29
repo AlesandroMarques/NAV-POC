@@ -10,7 +10,7 @@ const navigation = (props) =>  {
 
       return (
          <header className={classes.NavBar}>
-         <TopNav/>
+         <TopNav changePageHandler={props.changePageHandler}/>
           <NavBar dropDowns={props.dropDowns} toggle={props.toggleBackDropHandler} changePageHandler={props.changePageHandler} />
           <SideBar dropDowns={props.dropDowns} open={props.showSideBar} show={props.showBackDrop} toggle={props.toggleBackDropHandler} changePageHandler={props.changePageHandler}/>
          </header>

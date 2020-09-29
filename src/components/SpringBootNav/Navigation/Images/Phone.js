@@ -1,5 +1,5 @@
 import React from 'react';
-import * as ReactBootStrap from "react-bootstrap";
+
 import classes from './Phone.module.css';
 
 import phoneImage from '../../../../assets/phone.png';

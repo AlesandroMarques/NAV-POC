@@ -41,6 +41,8 @@ import its_image from '../../assets/Solutions/it_services3.jpg';
 import ms_image from '../../assets/Solutions/managed_services2.jpg';
 import dr_image from '../../assets/Solutions/dr2.jpg';
 
+import AboutUs from '../../serviceComponents/Services/MAIN/About_Us';
+
 
 const SERVICE_INFO = new Map()
 SERVICE_INFO.set('dr' ,"What if your critical servers go down today, how long will it take for you to get back online? Do you have the resource to recover your servers quickly? Unexpected disruptions can severely affect your operations, resulting in lost revenue and unhappy customers. Duologik cost-effective Disaster Recovery solution gets you up and running in minutes or hours")
@@ -161,6 +163,8 @@ class Layout extends Component  {
       {name:"its", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[2]}/>},
       {name:"ms",main:true, show:false, output:<SolutionsController allInfo={DROPDOWNS[3]}/>},
       {name:"disasterrecovery",main:true,show:true, output:<SolutionsController allInfo={DROPDOWNS[4]}/>},*/
+
+      {name:"about_us", show:false, output:<AboutUs/>},
 
       {name:"iti", solution:true,show:false, output:0},
       {name:"cloud", solution:true,show:false, output:1},
