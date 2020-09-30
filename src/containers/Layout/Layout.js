@@ -42,6 +42,7 @@ import ms_image from '../../assets/Solutions/managed_services2.jpg';
 import dr_image from '../../assets/Solutions/dr2.jpg';
 
 import AboutUs from '../../serviceComponents/Services/MAIN/About_Us';
+import Resources from '../../serviceComponents/Services/MAIN/Resources/Resources';
 
 
 const SERVICE_INFO = new Map()
@@ -151,12 +152,13 @@ const DROPDOWNS=[
      
 
 class Layout extends Component  {
+ 
 
   
 
 
   state ={
-    page:"disasterrecovery",
+    page:"resources",
     pages:[
      /* {name:"iti", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[0]}/>},
       {name:"cloud", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[1]}/>},
@@ -165,12 +167,13 @@ class Layout extends Component  {
       {name:"disasterrecovery",main:true,show:true, output:<SolutionsController allInfo={DROPDOWNS[4]}/>},*/
 
       {name:"about_us", show:false, output:<AboutUs/>},
+      {name:"resources", show:true, output:<Resources/>},
 
       {name:"iti", solution:true,show:false, output:0},
       {name:"cloud", solution:true,show:false, output:1},
       {name:"its", solution:true,show:false, output:2},
       {name:"ms",solution:true, show:false, output:3},
-      {name:"disasterrecovery",solution:true,show:true, output:4},
+      {name:"disasterrecovery",solution:true,show:false, output:4},
 
 
       {name:"virtual_storage", show:false, output:<VirtualStorage/>},

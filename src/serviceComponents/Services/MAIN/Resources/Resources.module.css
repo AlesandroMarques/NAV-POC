@@ -1,0 +1,34 @@
+.Resources{
+    width: 60%;
+    margin-top: 150px;
+    margin-left: 20%;
+  text-align: center;
+  
+}
+
+
+.Resources h3{
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: 	#ec1f2e;
+    text-align: center;
+
+}
+
+@media (max-width: 648px) {
+    .Resources{
+        margin-top: 170px;
+        width: 65%;
+        margin-left: 17.5%;
+    }
+    }
+    
+    @media (max-width: 575px) {
+        .Resources{
+            margin-top: 80px;
+            width: 70%;
+            margin-left: 15%;
+        }
+        }
