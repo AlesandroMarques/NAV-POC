@@ -8,12 +8,14 @@ import DRAASpdf1 from '../../../../assets/PDFs/DRAAS-Case-Study.pdf';
 import DRAASpdf2 from '../../../../assets/PDFs/DRAAS-White-Paper.pdf';
 import DRpdf from '../../../../assets/PDFs/DR-Case-Study.pdf';
 import VEEAMpdf from '../../../../assets/PDFs/Veeam.pdf';
+import FLASHpdf from '../../../../assets/PDFs/flash_case_study.pdf';
 
 import O365 from '../../../../assets/PDFs/O365.png';
 import Veeam from '../../../../assets/PDFs/Veeam.png';
 import DR from '../../../../assets/PDFs/DR.png';
 import DRAAScase from '../../../../assets/PDFs/DRAAS-Case.png';
 import DRAASwhite from '../../../../assets/PDFs/DRAAS-White.png';
+import FLASH from '../../../../assets/PDFs/All_Flash.png';
 
 const RESOURCES = [
     {
@@ -59,6 +61,16 @@ const RESOURCES = [
         buttonName:"Download Presentaion Now",
         pdf: VEEAMpdf,
         img: Veeam
+
+    }
+    ,
+    {
+        header:"WHITEPAPER",
+        title:"All-Flash Array: Flash in the Plan?",
+        info:"Does your business need the all-flash array as much as it needs your busniess?",
+        buttonName:"Download Whitepaper Now",
+        pdf: FLASHpdf,
+        img: FLASH
 
     }
 

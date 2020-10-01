@@ -57,6 +57,25 @@
     margin-bottom: 5px;
 }
 
+.Service button{
+    color: black;
+    text-align: center;
+    display: flex;
+   /* background-color: #ec1f2e;*/
+
+
+
+}
+
+.Service button:hover{
+    color: white;
+    text-align: center;
+    background-color: #ec1f2e;
+
+
+
+}
+
 
 .List li{
 

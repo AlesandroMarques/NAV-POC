@@ -1,7 +1,15 @@
 import React from 'react';
 import classes from '../Service.module.css';
 
+import flashImg from '../../../assets/PDFs/All_Flash.png';
+import flashPDF from '../../../assets/PDFs/flash_case_study.pdf';
+
 const service = (props) => {
+
+    const openWindow = (pdf) =>{
+
+        window.open(pdf);
+    };
 
 return (
     <div className={classes.Service} >
@@ -30,7 +38,13 @@ return (
      
         
         <h6>Download the file to read more.</h6>
-    
+        <img
+        src={flashImg}
+        width="200"
+        height="258"
+       alt="Case Study Img"
+      />
+        <button onClick={() => openWindow(flashPDF)}>Download All Flash Whitepaper</button>
 
 
         </div>
