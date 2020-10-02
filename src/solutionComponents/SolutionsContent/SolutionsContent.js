@@ -12,7 +12,7 @@ const solutionsContent = (props) =>{
 
     return(
         <div className={classes.SolutionsContent}>
-            <h4>{title}</h4>
+            <h3>{title}</h3>
         {props.dropDownItems.map(item =>(
         <ServiceInfo name={item.name} info={item.info} page={item.page} href={item.href} clicked={props.clicked}/>
         )

@@ -14,7 +14,7 @@
 
 }
 
-
+/*
 .column{
     text-align: center;
     float: left;
@@ -70,13 +70,13 @@
     }
    
 
-}
+}*/
 
 @media(max-width:700px){
-    .column{
+    /*.column{
 
         width:50%;
-    }
+    }*/
     .Footer{
         margin-left: 20%;
     }
@@ -84,10 +84,10 @@
 }
 
 @media(max-width:500px){
-    .column{
+    /*.column{
         text-align: center;
         width:100%;
-    }
+    }*/
     .Footer{
         margin-left: 35%;
     }

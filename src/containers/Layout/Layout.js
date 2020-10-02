@@ -75,6 +75,7 @@ SERVICE_INFO.set('onsite_monitoring',"Duologik has the required knowledge and ex
 SERVICE_INFO.set('protect',"Network security is a top priority for any organization in today’s uncertain IT environment. Threats to your system and data can severely impede business innovation, limit productivity and damage compliance efforts. Duologik’s network security services provide organizations preemptive threat measures, protect your operating environment, and monitor suspicious activity.")
 
 const DROPDOWNS=[
+
   { page:"iti",
     nameUp: 'IT INFRUSTRCTURE',
   name:' IT Infrustructure',
