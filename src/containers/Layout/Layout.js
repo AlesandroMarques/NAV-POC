@@ -158,7 +158,7 @@ class Layout extends Component  {
 
 
   state ={
-    page:"resources",
+    page:"home",
     pages:[
      /* {name:"iti", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[0]}/>},
       {name:"cloud", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[1]}/>},
@@ -167,7 +167,9 @@ class Layout extends Component  {
       {name:"disasterrecovery",main:true,show:true, output:<SolutionsController allInfo={DROPDOWNS[4]}/>},*/
 
       {name:"about_us", show:false, output:<AboutUs/>},
-      {name:"resources", show:true, output:<Resources/>},
+      {name:"resources", show:false, output:<Resources/>},
+
+      {name:"home", show:true, solution:true,  output:-1},
 
       {name:"iti", solution:true,show:false, output:0},
       {name:"cloud", solution:true,show:false, output:1},
@@ -261,7 +263,9 @@ render(){
             {this.state.pages.map( item => {
             if(item.show){
               if(item.solution){
-                return <SolutionsController allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />
+                  /*if(item.output === -1){return <Home allInfo={DROPDOWNS} changePageHandler={this.changePageHandler}/>}
+                  else{*/
+                  return <SolutionsController allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />/*}*/
               }
               else{
             return(item.output );}}

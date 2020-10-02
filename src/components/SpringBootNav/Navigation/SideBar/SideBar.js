@@ -22,7 +22,7 @@ const sidebar = (props) => {
                  <nav>
                     <ul>
                         <li>
-                            <a href="#home" >Home</a>
+                            <a href="#home" onClick={() => props.changePageHandler("home")}>Home</a>
                         </li>
                         <li>
                             <a href="#resources"  onClick={() => props.changePageHandler("resources")}>Resources</a>

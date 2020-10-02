@@ -1,6 +1,7 @@
 import React from 'react';
 import SolutionsHeader from './SolutionsHeader/SolutionsHeader';
 import SolutionsContent from './SolutionsContent/SolutionsContent';
+import Home from './Home/Home';
 //import classes from './SolutionsController.module.css';
 
 
@@ -8,6 +9,11 @@ import SolutionsContent from './SolutionsContent/SolutionsContent';
 
          
 const testSolutions =(props) =>{
+
+          if(props.index ===-1){
+
+            return(<Home allInfo={props.allInfo} clicked={props.changePageHandler}/>);
+          } else{
           const AllInfo= props.allInfo[props.index];
       
         return (
@@ -18,6 +24,7 @@ const testSolutions =(props) =>{
 
           </div>
         );
+          }
     
 }
 
