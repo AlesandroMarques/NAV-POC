@@ -261,7 +261,7 @@ render(){
             {this.state.pages.map( item => {
             if(item.show){
               if(item.solution){
-                return <SolutionsController allInfo={DROPDOWNS[item.output]} changePageHandler={this.changePageHandler} />
+                return <SolutionsController allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />
               }
               else{
             return(item.output );}}

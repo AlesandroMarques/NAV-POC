@@ -8,14 +8,13 @@ import SolutionsContent from './SolutionsContent/SolutionsContent';
 
          
 const testSolutions =(props) =>{
-  
-   
+          const AllInfo= props.allInfo[props.index];
       
         return (
       
           <div >
-          <SolutionsHeader img={props.allInfo.img} header={props.allInfo.nameUp} des={props.allInfo.des}/>
-          <SolutionsContent name={props.allInfo.nameUp} dropDownItems={props.allInfo.dropDownItems} clicked={props.changePageHandler} />
+          <SolutionsHeader img={AllInfo.img} header={AllInfo.nameUp} des={AllInfo.des}/>
+          <SolutionsContent name={AllInfo.nameUp} dropDownItems={AllInfo.dropDownItems} clicked={props.changePageHandler} />
 
           </div>
         );
