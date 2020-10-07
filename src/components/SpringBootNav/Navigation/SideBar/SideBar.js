@@ -18,7 +18,7 @@ const sidebar = (props) => {
         <Aux>
             <BackDrop show={props.show} clicked={props.toggle}/>
             <div className={attachedCssClasses.join(' ')}>
-                <div className={classes.Logo}><Logo/></div>
+                <div className={classes.Logo} onClick={() => props.changePageHandler("home")}><Logo/></div>
                  <nav>
                     <ul>
                         <li>

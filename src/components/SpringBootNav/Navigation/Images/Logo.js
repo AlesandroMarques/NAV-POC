@@ -2,12 +2,12 @@ import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 import image from '../../../../assets/duologik-logo.jpg';
 
-const logo = () =>{
+const logo = (props) =>{
 
     return (
         <div >
 
-<ReactBootStrap.Navbar.Brand href="#home"><img
+<ReactBootStrap.Navbar.Brand href="#home" onClick={()=> props.changePageHandler("home")}><img
         src={image}
         width="180"
         height="43"

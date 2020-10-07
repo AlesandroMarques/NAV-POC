@@ -146,7 +146,7 @@ const DROPDOWNS=[
                 {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
                 {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4", page:"managed_backup",info: SERVICE_INFO.get("managed_backup")},
                 {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info: SERVICE_INFO.get("arcserve")}
-                              ]}                 
+                              ]}                     
 
       ]
 
