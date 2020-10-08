@@ -4,6 +4,7 @@ import Navibar from '../../components/SpringBootNav/Navigation/Navigation';
 import VirtualStorage from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Virtual_Storage';
 import ProdFill from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Product_Fulfillment';
 import HPStorage from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/HP_Storage_3Par';
+import Nimble from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Nimble';
 import AllFlashArray from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/All_Flash_Array';
 import ConvergedInf from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Converged_Infrastructure';
 import Networking from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Networking';
@@ -60,6 +61,8 @@ SERVICE_INFO.set('all_flash_array' ,"As the world steams along its path toward a
 SERVICE_INFO.set('converged_infrastructure' ,"You want to deploy applications faster. You want to deliver IT capacity to your business and services to your customers more quickly and easily. And you want a shorter time-to-value for IT investments. Virtualization is a well-understood technology that can help you increase agility, reduce costs, and simplify IT management. But virtualization is not ”just another technology.”")
 SERVICE_INFO.set('product_fulfillment' ,"Duologik’s IT procurement services enable customers to source, warehouse, configure, test and ship hardware and software nationally.  We work with your budget to meet the specification, brand quality and delivery schedules for successful project deployments.  Our team negotiates directly with vendors for the best possible prices")
 SERVICE_INFO.set('networking',"With the explosion of employees bringing their own devices to the office, you can see the benefits of implementing wireless and wired networks into your organization. To maintain productivity, it is important for employees to have access to the corporate network by giving them wireless access from their own devices.")
+SERVICE_INFO.set('nimble' ,"HPE Nimble Storage has set the bar for disrupting, simplifying, and modernizing storage to help customers accelerate their digital transformation. Today the innovation continues. Nimble Storage customers now have an enhanced platform that turbocharges apps, eliminates disruptions, and drives more IT agility.")
+
 
 SERVICE_INFO.set('private_cloud',"We incorporate proven elastic cloud infrastructure and our decades of managed operations experience delivering a secure, private, custom solution addressing the most demanding businesses challenges. ")
 SERVICE_INFO.set('saas',"Increasing employee productivity with available technology has never been easier and it can be made possible with low-cost investment, and high flexibility. Explore how Duologik’s Software as a Service (SaaS) unlocks the potential of workers, empowers business managers and enables CEOs to make informed decisions in real time with faster technology deployment")
@@ -84,7 +87,8 @@ const DROPDOWNS=[
   img:iti_image,
       dropDownItems:[
          {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage",info: SERVICE_INFO.get("virtual_storage")},
-         {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage",info: SERVICE_INFO.get("hp_storage")},
+        /* {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage",info: SERVICE_INFO.get("hp_storage")},*/
+        {id:'ahds4', nameUp:"NIMBLE STORAGE" ,name: "Nimble Storage", href:"#iti/1.2", page:"nimble",info: SERVICE_INFO.get("nimble")},
          {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array",info: SERVICE_INFO.get("all_flash_array")},
         {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure",info: SERVICE_INFO.get("converged_infrastructure")},
          {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment",info: SERVICE_INFO.get("product_fulfillment")},
@@ -182,6 +186,7 @@ class Layout extends Component  {
       {name:"virtual_storage", show:false, output:<VirtualStorage/>},
       {name:"product_fulfillment", show:false, output:<ProdFill/>},
       {name:"hp_storage", show:false, output:<HPStorage/>},
+      {name:"nimble", show:false, output:<Nimble/>},
       {name:"all_flash_array", show:false, output:<AllFlashArray/>},
       {name:"converged_infrastructure", show:false, output:<ConvergedInf/>},
       {name:"networking", show:false, output:<Networking/>},

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './footerBanner.module.css';
+import classes from './footerBannerColour.module.css';
 import ciscoImg from '../../assets/Banner/cisco_trans.png';
 import vmwareImg from '../../assets/Banner/wmware_trans.png';
 import hpImg from '../../assets/Banner/hp_trans.png';
