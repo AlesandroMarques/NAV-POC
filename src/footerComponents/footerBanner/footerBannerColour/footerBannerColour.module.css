@@ -5,7 +5,7 @@
 
 .FooterBanner div{
     width:100%;
-    background-color: #ec1f2e;
+    background-color:lightgrey;
     
     text-align: center;
     float: left;
@@ -14,7 +14,7 @@
 .FooterBanner div h4{
     
     margin-top: 10px;
-    color: white;
+    color:black;
     font-weight: bold;
     
 
