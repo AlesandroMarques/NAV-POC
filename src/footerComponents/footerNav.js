@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './footerNav.module.css';
 
 import FooterColumn from './footerColumn/footerColumn';
+import FooterColumn2 from './footerColumn/FooterColumn2';
 import FooterInfo from './footerInfo/footerInfo';
 import FooterBanner from './footerBanner/footerBanner';
 
@@ -13,7 +14,7 @@ import FooterBannerColour from './footerBanner/footerBannerColour/footerBannerCo
 const footer = (props) =>{
 
     
-    return(
+   /* return(
 
         <Aux>
             <FooterBannerColour/>
@@ -23,6 +24,16 @@ const footer = (props) =>{
         ))}
         
         </div>
+        <FooterInfo/>
+        </Aux>
+    );*/
+    return(
+
+        <Aux>
+            <FooterBannerColour/>
+           
+        <FooterColumn2 dropDowns={props.dropDowns} changePageHandler={props.changePageHandler}/>
+    
         <FooterInfo/>
         </Aux>
     );
