@@ -13,11 +13,11 @@ const footerColumn2 = (props) =>{
          { props.dropDowns.map( 
              dropdown =>
               (
-       <div className={classes.column}>
+       <div key ={dropdown.page} className={classes.column}>
        <h6><a href={dropdown.href} onClick={() => props.changePageHandler(dropdown.page)}>{dropdown.name}</a></h6>
        {dropdown.dropDownItems.map( 
            item => (
-        <FooterItem href={item.href} name={item.name} page={item.page} changePageHandler={props.changePageHandler}/>
+        <FooterItem key={item.page} href={item.href} name={item.name} page={item.page} changePageHandler={props.changePageHandler}/>
                 ))}
         </div>
             ))}

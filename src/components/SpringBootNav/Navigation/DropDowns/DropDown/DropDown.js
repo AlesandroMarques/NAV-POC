@@ -14,7 +14,7 @@ const DropDown = (props) => {
     <div>
     <ReactBootStrap.SplitButton variant="light" bg="light"  title={props.title} onClick={() => props.changePageHandler(props.page)} id="collasible-nav-dropdown" href={props.href}>
       {props.dropDownItems.map( item => (
-        <DropDownItem href={item.href} name={item.nameUp} page={item.page} changePageHandler={props.changePageHandler}/>
+        <DropDownItem key={item.page} href={item.href} name={item.nameUp} page={item.page} changePageHandler={props.changePageHandler}/>
       )
       )}
     </ReactBootStrap.SplitButton>

@@ -14,7 +14,7 @@ const home = (props) =>{
       <div className={classes.Home}>
       <div className={classes.row}>
       {props.allInfo.map( entry =>
-       <div className={classes.column}><HomeSolution clicked ={props.clicked} title={entry.nameUp} image={entry.img} info={entry.des} href={entry.href} page={entry.page} allInfo={entry.dropDownItems}/></div> 
+       <div key={entry.page} className={classes.column}><HomeSolution  clicked ={props.clicked} title={entry.nameUp} image={entry.img} info={entry.des} href={entry.href} page={entry.page} allInfo={entry.dropDownItems}/></div> 
   
   
       )}

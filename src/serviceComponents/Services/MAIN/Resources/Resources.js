@@ -21,6 +21,7 @@ const RESOURCES = [
     {
         header:"ONE PAGER",
         title:"Office 365 Migration and Backup",
+        key:1,
         info:"Find out how we can help you bring your Microsoft Office implementation to the cloud.",
         buttonName:"Download One Pager Now",
         pdf: O365pdf,
@@ -30,6 +31,7 @@ const RESOURCES = [
     {
         header:"CASE STUDY",
         title:"Disaster Recovery as a Service",
+        key:2,
         info:"How we helped a company to recover from a declared disaster with quick RPO and RTO times.",
         buttonName:"Download Case Study Now",
         pdf: DRAASpdf1,
@@ -39,6 +41,7 @@ const RESOURCES = [
     {
         header:"WHITEPAPER",
         title:"Disaster Recovery for Municipalities",
+        key:3,
         info:"Learn how municipalities view Disaster Recovery and how the DRaaS shared service works.",
         buttonName:"Download Whitepaper Now",
         pdf: DRAASpdf2,
@@ -48,6 +51,7 @@ const RESOURCES = [
     {
         header:"CASE STUDY",
         title:"Duologik DR Readiness Assessment",
+        key:4,
         info:"This Case Study is based on an actual engagement for which Duologik was contracted by a public sector organization in Southwest Ontario to develop a Disaster Recovery Readiness Assessment.",
         buttonName:"Download Case Study Now",
         pdf: DRpdf,
@@ -57,6 +61,7 @@ const RESOURCES = [
     {
         header:"PRESENTATION",
         title:"Veeam: Manage All Workloads – Virtual, Physical and Cloud – from a Single Console.",
+        key:5,
         info:"- Veeam Availability Suite 9.5 Update 3  - Veeam Agent for Microsoft Windows 2.1  - Veeam Agent for Linux v2",
         buttonName:"Download Presentaion Now",
         pdf: VEEAMpdf,
@@ -67,6 +72,7 @@ const RESOURCES = [
     {
         header:"WHITEPAPER",
         title:"All-Flash Array: Flash in the Plan?",
+        key:6,
         info:"Does your business need the all-flash array as much as it needs your busniess?",
         buttonName:"Download Whitepaper Now",
         pdf: FLASHpdf,
@@ -87,7 +93,7 @@ return(
     <div className={classes.Resources}>
         <h3  >Resources</h3>
         {RESOURCES.map( item=> {
-            return <Resource header={item.header} title={item.title} info={item.info} buttonName={item.buttonName} pdf={item.pdf} img={item.img} openWindow={openWindow}/>
+            return <Resource key={item.key} header={item.header} title={item.title} info={item.info} buttonName={item.buttonName} pdf={item.pdf} img={item.img} openWindow={openWindow}/>
                  
 
         })}

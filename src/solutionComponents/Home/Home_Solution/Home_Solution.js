@@ -17,7 +17,7 @@ const homeSolution = (props) =>{
       <div>
                     <ul>
                     {props.allInfo.map(item => 
-                        <li><a href={item.href} onClick={() => props.clicked(item.page)}> {item.name}</a></li>)}
+                        <li key={item.page}><a href={item.href} onClick={() => props.clicked(item.page)}> {item.name}</a></li>)}
                 </ul></div>
     <p>{props.info}</p>
         </div>

@@ -10,7 +10,7 @@ const dropdowns = (props) => {
         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav" variant="light" bg="light" >
         <ReactBootStrap.Nav variant="light" bg="light" >
         { props.dropDowns.map( dropdown => (
-        <DropDown title={dropdown.nameUp} page={dropdown.page} href={dropdown.href} dropDownItems={dropdown.dropDownItems} changePageHandler={props.changePageHandler}/>
+        <DropDown key ={dropdown.page} title={dropdown.nameUp} page={dropdown.page} href={dropdown.href} dropDownItems={dropdown.dropDownItems} changePageHandler={props.changePageHandler}/>
         ))}
         </ReactBootStrap.Nav>
     </ReactBootStrap.Navbar.Collapse>

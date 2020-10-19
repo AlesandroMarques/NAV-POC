@@ -14,7 +14,7 @@ const solutionsContent = (props) =>{
         <div className={classes.SolutionsContent}>
             <h3>{title}</h3>
         {props.dropDownItems.map(item =>(
-        <ServiceInfo name={item.name} info={item.info} page={item.page} href={item.href} clicked={props.clicked}/>
+        <ServiceInfo  key={item.page} name={item.name} info={item.info} page={item.page} href={item.href} clicked={props.clicked}/>
         )
         )}
 

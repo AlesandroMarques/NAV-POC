@@ -86,14 +86,14 @@ const DROPDOWNS=[
   des:"GIVE YOUR DATACENTRE EXPERT ATTENTION",
   img:iti_image,
       dropDownItems:[
-         {id:'ahd7d', nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage",info: SERVICE_INFO.get("virtual_storage")},
+         { nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage",info: SERVICE_INFO.get("virtual_storage")},
         /* {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage",info: SERVICE_INFO.get("hp_storage")},*/
-        {id:'ahds4', nameUp:"NIMBLE STORAGE" ,name: "Nimble Storage", href:"#iti/1.2", page:"nimble",info: SERVICE_INFO.get("nimble")},
-         {id:'ad5gr', nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array",info: SERVICE_INFO.get("all_flash_array")},
-        {id:'nh7e3', nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure",info: SERVICE_INFO.get("converged_infrastructure")},
-         {id:'5fe8h', nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment",info: SERVICE_INFO.get("product_fulfillment")},
-         {id:'cki8e', nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking",info: SERVICE_INFO.get("networking")},
-         {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
+        { nameUp:"NIMBLE STORAGE" ,name: "Nimble Storage", href:"#iti/1.2", page:"nimble",info: SERVICE_INFO.get("nimble")},
+         { nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array",info: SERVICE_INFO.get("all_flash_array")},
+        { nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure",info: SERVICE_INFO.get("converged_infrastructure")},
+         { nameUp:"PRODUCT FULFILLMENT", name:"Product Fulfillment", href:"#iti/1.5", page:"product_fulfillment",info: SERVICE_INFO.get("product_fulfillment")},
+         { nameUp:"NETWORKING" , name:"Networking", href:"#iti/1.6", page:"networking",info: SERVICE_INFO.get("networking")},
+         { nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
         ]
         },
 
@@ -104,10 +104,10 @@ const DROPDOWNS=[
         des:"INFRASTRUCTURE FOR GROWTH AND FLEXIBILITY",
         img:cloud_image,
             dropDownItems:[
-               {id:'65s7fh', nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud",info: SERVICE_INFO.get("private_cloud")},
-               {id:'d8hf6e', nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
-               {id:'65d8f7', nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas",info: SERVICE_INFO.get("saas")},
-               {id:'v835f', nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
+               { nameUp:"PRIVATE CLOUD" ,name:"Private Cloud", href:"#cloud/1.1", page:"private_cloud",info: SERVICE_INFO.get("private_cloud")},
+               { nameUp:"CLOUD BACKUP" , name:"Cloud Backup", href:"#cloud/1.2", page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
+               { nameUp:"SOFTWARE AS A SERVICE" ,name:"Software as a Service", href:"#cloud/1.3", page:"saas",info: SERVICE_INFO.get("saas")},
+               { nameUp:"INFRASTRUCTURE AS A SERVICE" ,name:"Infrustructure as a Service", href:"#iti/1.7", page:"iaas",info: SERVICE_INFO.get("iaas")}
             ]},
 
         {page:"its",
@@ -117,9 +117,9 @@ const DROPDOWNS=[
         des:"SOLVING COMPLEX BUSINESS PROBLEMS WITH IT SOLUTIONS",
         img:its_image,
               dropDownItems:[
-                   {id:'fhyr75', nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services",info: SERVICE_INFO.get("professional_services")},
-                   {id:'d8hskf', nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment",info: SERVICE_INFO.get("data_managment")},
-                   {id:'dubwtr', nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting",info: SERVICE_INFO.get("troubleshooting")}
+                   { nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services",info: SERVICE_INFO.get("professional_services")},
+                   { nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment",info: SERVICE_INFO.get("data_managment")},
+                   { nameUp:"TROUBLESHOOTING" , name:"Troubleshooting", href:"#its/1.3", page:"troubleshooting",info: SERVICE_INFO.get("troubleshooting")}
                 ]},
 
           {page:"ms",
@@ -129,11 +129,11 @@ const DROPDOWNS=[
             des:"BRING YOUR BACKUP AND RECOVERY PLANS UP TO SPEED",
             img:ms_image,
                dropDownItems:[
-                       {id:'qwdr', nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server",info: SERVICE_INFO.get("desktop_server")},
-                       {id:'vbft', nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support",info: SERVICE_INFO.get("remote_support")},
-                       {id:'ukgt', nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring",info: SERVICE_INFO.get("advanced_monitoring")},
-                       {id:'ukht', nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring",info: SERVICE_INFO.get("onsite_monitoring")},
-                       {id:'fgdr', nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect",info: SERVICE_INFO.get("protect")}
+                       { nameUp:"DESKTOP & SERVER" , name:"Desktop & Server", href:"#ms/1.1", page:"desktop_server",info: SERVICE_INFO.get("desktop_server")},
+                       { nameUp:"REMOTE SUPPORT" , name:"Remote Support",href:"#ms/1.2", page:"remote_support",info: SERVICE_INFO.get("remote_support")},
+                       { nameUp:"ADVANCED MONITORING" , name:"Advanced Monitoring", href:"#ms/1.3", page:"advanced_monitoring",info: SERVICE_INFO.get("advanced_monitoring")},
+                       { nameUp:"ON-SITE SUPPORT" , name:"On-Site Support",href:"#ms/1.4", page:"onsite_monitoring",info: SERVICE_INFO.get("onsite_monitoring")},
+                       { nameUp:"PROTECT" , name:"Protect", href:"#ms/1.5", page:"protect",info: SERVICE_INFO.get("protect")}
                     ]}  
                     ,
 
@@ -144,12 +144,12 @@ const DROPDOWNS=[
           des:"PROACTIVE PROTECTION FOR YOUR ENTIRE ORGANIZATION",
           img:dr_image,
               dropDownItems:[
-                {id:'45sdrf', nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr", info: SERVICE_INFO.get("dr")},
-                {id:'45dufg', nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning", info: SERVICE_INFO.get("dr_planning")},
-                {id:'dy7fhw', nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas",info: SERVICE_INFO.get("draas")},
-                {id:'6sig7e', nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
-                {id:'digfu3', nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4", page:"managed_backup",info: SERVICE_INFO.get("managed_backup")},
-                {id:'digfu3', nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info: SERVICE_INFO.get("arcserve")}
+                { nameUp:"DISASTER RECOVERY" , name:"Disaster Recovery", href:"#dr/1.1" , page:"dr", info: SERVICE_INFO.get("dr")},
+                { nameUp:"DR PLANNING" ,name:"DR Planning", href:"#dr/1.2",page:"dr_planning", info: SERVICE_INFO.get("dr_planning")},
+                { nameUp:"DISASTER RECOVERY AS A SERVICE" , name:"Disaster Recovery as a Service", href:"#dr/1.3",page:"draas",info: SERVICE_INFO.get("draas")},
+                { nameUp:"CLOUD BACKUP", name:"Cloud Backup", href:"#cloud/1.2",page:"cloud_backup",info: SERVICE_INFO.get("cloud_backup")},
+                { nameUp:"MANAGED BACK-UP SERVICES" , name:"Managed Back-up Services", href:"#dr/1.4", page:"managed_backup",info: SERVICE_INFO.get("managed_backup")},
+                { nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info: SERVICE_INFO.get("arcserve")}
                               ]}    
                              
       ]
@@ -171,29 +171,29 @@ class Layout extends Component  {
       {name:"ms",main:true, show:false, output:<SolutionsController allInfo={DROPDOWNS[3]}/>},
       {name:"disasterrecovery",main:true,show:true, output:<SolutionsController allInfo={DROPDOWNS[4]}/>},*/
 
-      {name:"about_us", show:false, output:<AboutUs/>},
+      { name:"about_us", show:false, output:<AboutUs/>},
       {name:"resources", show:false, output:<Resources/>},
 
-      {name:"home", show:true, solution:true,  output:-1},
+      { name:"home", show:true, solution:true,  output:-1},
 
-      {name:"iti", solution:true,show:false, output:0},
-      {name:"cloud", solution:true,show:false, output:1},
+      { name:"iti", solution:true,show:false, output:0},
+      { name:"cloud", solution:true,show:false, output:1},
       {name:"its", solution:true,show:false, output:2},
-      {name:"ms",solution:true, show:false, output:3},
-      {name:"disasterrecovery",solution:true,show:false, output:4},
+      { name:"ms",solution:true, show:false, output:3},
+      { name:"disasterrecovery",solution:true,show:false, output:4},
 
 
-      {name:"virtual_storage", show:false, output:<VirtualStorage/>},
-      {name:"product_fulfillment", show:false, output:<ProdFill/>},
-      {name:"hp_storage", show:false, output:<HPStorage/>},
-      {name:"nimble", show:false, output:<Nimble/>},
-      {name:"all_flash_array", show:false, output:<AllFlashArray/>},
-      {name:"converged_infrastructure", show:false, output:<ConvergedInf/>},
-      {name:"networking", show:false, output:<Networking/>},
+      { name:"virtual_storage", show:false, output:<VirtualStorage/>},
+      { name:"product_fulfillment", show:false, output:<ProdFill/>},
+      { name:"hp_storage", show:false, output:<HPStorage/>},
+      { name:"nimble", show:false, output:<Nimble/>},
+      {  name:"all_flash_array", show:false, output:<AllFlashArray/>},
+      { name:"converged_infrastructure", show:false, output:<ConvergedInf/>},
+     {  name:"networking", show:false, output:<Networking/>},
 
-      {name:"private_cloud", show:false, output:<PrivateCloud/>},
-      {name:"saas", show:false, output:<SaaS/>},
-      {name:"iaas", show:false, output:<IaaS/>},
+      { name:"private_cloud", show:false, output:<PrivateCloud/>},
+      { name:"saas", show:false, output:<SaaS/>},
+      { name:"iaas", show:false, output:<IaaS/>},
       {name:"cloud_backup", show:false, output:<CloudBackup/>},
 
       {name:"professional_services", show:false, output:<ProfessionalServices/>},
@@ -201,7 +201,7 @@ class Layout extends Component  {
       {name:"troubleshooting", show:false, output:<Troubleshooting/>},
       
 
-      {name:"desktop_server", show:false, output:<DesktopServer/>},
+      { name:"desktop_server", show:false, output:<DesktopServer/>},
       {name:"remote_support", show:false, output:<RemoteSupport/>},
       {name:"advanced_monitoring", show:false, output:<AdvancedMonitoring/>},
       {name:"onsite_monitoring", show:false, output:<OnsiteMonitoring/>},
@@ -209,10 +209,10 @@ class Layout extends Component  {
 
 
         {name:"dr_planning", show:false, output:<DRPlanning/>},
-        {name:"dr", show:false, output:<DR/>},
-        {name:"draas", show:false, output:<DRaaS/>},
+        { name:"dr", show:false, output:<DR/>},
+        { name:"draas", show:false, output:<DRaaS/>},
         {name:"managed_backup", show:false, output:<ManagedBackup/>},
-        {name:"arcserve", show:false, output:<Arcserve/>}
+        { name:"arcserve", show:false, output:<Arcserve/>}
     
 
 
@@ -220,6 +220,13 @@ class Layout extends Component  {
     ],
     showBackDrop:false,
     showSideBar:false
+}
+
+//testing out compententDidMount for heep requests later
+componentDidMount(){
+  console.log(this.state)
+
+
 }
 
 toggleBackDropHandler = () =>{
@@ -271,7 +278,7 @@ render(){
               if(item.solution){
                   /*if(item.output === -1){return <Home allInfo={DROPDOWNS} changePageHandler={this.changePageHandler}/>}
                   else{*/
-                  return <SolutionsController allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />/*}*/
+                  return <SolutionsController key ={item.name} allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />/*}*/
               }
               else{
             return(item.output );}}

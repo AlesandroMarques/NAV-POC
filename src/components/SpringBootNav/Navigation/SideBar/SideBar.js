@@ -37,7 +37,7 @@ const sidebar = (props) => {
 
                     <ul>
                        {props.dropDowns.map(item => (
-                           <li>
+                           <li key ={item.page}>
                                <a href ={item.href} onClick={() => props.changePageHandler(item.page)}>{item.name}</a>
                            </li>
 
