@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import axios from 'axios';
 import Navibar from '../../components/SpringBootNav/Navigation/Navigation';
 
 import VirtualStorage from '../../serviceComponents/Services/IT_INFRUSTRUCTURE/Virtual_Storage';
@@ -46,6 +47,8 @@ import AboutUs from '../../serviceComponents/Services/MAIN/About_Us';
 import Resources from '../../serviceComponents/Services/MAIN/Resources/Resources';
 
 
+
+/*
 const SERVICE_INFO = new Map()
 SERVICE_INFO.set('dr' ,"What if your critical servers go down today, how long will it take for you to get back online? Do you have the resource to recover your servers quickly? Unexpected disruptions can severely affect your operations, resulting in lost revenue and unhappy customers. Duologik cost-effective Disaster Recovery solution gets you up and running in minutes or hours")
 SERVICE_INFO.set('dr_planning' ,"Our specialists have the capabilities to help you create a DR strategy to keep your systems safe, accessible, recoverable and meet compliance obligations.  They will restore your most critical applications in our state of the art data centre recovering you from IT outages should a disaster strike.")
@@ -76,7 +79,15 @@ SERVICE_INFO.set('remote_support',"Our remote support objective is to resolve in
 SERVICE_INFO.set('advanced_monitoring',"Duologik Advanced Monitoring service tracks the leading indicators in your infrastructure such as: device CPU utilization, capacity and memory utilization, including device and server availability. You can rest assured if an issue arises, you will get the notifications you need to effectively maintain your IT performance.")
 SERVICE_INFO.set('onsite_monitoring',"Duologik has the required knowledge and expertise to work with you on supporting your infrastructure and specific business applications.  You will be assigned an experienced engineer, committed to managing and maintaining your competitive, modern IT environment. Regular scheduled visits will be tailored to your specific needs and budget.")
 SERVICE_INFO.set('protect',"Network security is a top priority for any organization in today’s uncertain IT environment. Threats to your system and data can severely impede business innovation, limit productivity and damage compliance efforts. Duologik’s network security services provide organizations preemptive threat measures, protect your operating environment, and monitor suspicious activity.")
-
+*/
+const IMAGE_MAP = new Map();
+IMAGE_MAP.set("iti",iti_image);
+IMAGE_MAP.set("cloud",cloud_image);
+IMAGE_MAP.set("its",its_image);
+IMAGE_MAP.set("ms",ms_image);
+IMAGE_MAP.set("disasterrecovery",dr_image);
+//IMAGE_MAP.set("tp",dr_image);
+/*
 const DROPDOWNS=[
 
   { page:"iti",
@@ -87,7 +98,6 @@ const DROPDOWNS=[
   img:iti_image,
       dropDownItems:[
          { nameUp:"VIRTUALIZATION & STORAGE", name:"Virtualization & Storage", href:"#iti/1.1" , page:"virtual_storage",info: SERVICE_INFO.get("virtual_storage")},
-        /* {id:'ahdsd', nameUp:"HP STORAGE | 3PAR" ,name: "HP Storage | 3PAR", href:"#iti/1.2", page:"hp_storage",info: SERVICE_INFO.get("hp_storage")},*/
         { nameUp:"NIMBLE STORAGE" ,name: "Nimble Storage", href:"#iti/1.2", page:"nimble",info: SERVICE_INFO.get("nimble")},
          { nameUp:"ALL FLASH ARRAY" , name:"All Flash Array", href:"#iti/1.3", page:"all_flash_array",info: SERVICE_INFO.get("all_flash_array")},
         { nameUp:"CONVERGED INFRASTRUCTURE" ,name:"Converged Infrustructure", href:"#iti/1.4", page:"converged_infrastructure",info: SERVICE_INFO.get("converged_infrastructure")},
@@ -115,7 +125,7 @@ const DROPDOWNS=[
         name:'IT Services',
         href: '#its',
         des:"SOLVING COMPLEX BUSINESS PROBLEMS WITH IT SOLUTIONS",
-        img:its_image,
+       img:its_image,
               dropDownItems:[
                    { nameUp:"PROFESSIONAL SERVICES" , name:"Professional Services", href:"#its/1.1", page:"professional_services",info: SERVICE_INFO.get("professional_services")},
                    { nameUp:"DATA MANAGMENT" , name:"Data Managment", href:"#its/1.2", page:"data_managment",info: SERVICE_INFO.get("data_managment")},
@@ -152,7 +162,7 @@ const DROPDOWNS=[
                 { nameUp:"ARCSERVE PRODUCTS & SERVICES" ,name:"Arcserve Products & Services", href:"#dr/1.5",page:"arcserve",info: SERVICE_INFO.get("arcserve")}
                               ]}    
                              
-      ]
+      ]*/
 
      
 
@@ -163,6 +173,8 @@ class Layout extends Component  {
 
 
   state ={
+    DROPDOWNS:[],
+
     page:"home",
     pages:[
      /* {name:"iti", main:true,show:false, output:<SolutionsController allInfo={DROPDOWNS[0]}/>},
@@ -181,6 +193,7 @@ class Layout extends Component  {
       {name:"its", solution:true,show:false, output:2},
       { name:"ms",solution:true, show:false, output:3},
       { name:"disasterrecovery",solution:true,show:false, output:4},
+     // { name:"tp",solution:true,show:false, output:5},
 
 
       { name:"virtual_storage", show:false, output:<VirtualStorage/>},
@@ -222,9 +235,28 @@ class Layout extends Component  {
     showSideBar:false
 }
 
-//testing out compententDidMount for heep requests later
-componentDidMount(){
-  console.log(this.state)
+//testing out compententDidMount for db /http requests later
+componentDidMount() {
+
+  axios.get('db.json')
+ // axios.get('db-test.json')
+  .then(response => {
+     console.log(response.data.dropdowns)
+    
+    const DROPDOWNS = response.data.dropdowns;
+     const UPDATED_DROPDOWNS = DROPDOWNS.map(DropDown =>{
+         return{
+             ...DropDown,
+             img: IMAGE_MAP.get(DropDown.page)
+         }
+     }
+
+     )
+      this.setState({
+        DROPDOWNS: UPDATED_DROPDOWNS
+      });
+  });
+  
 
 
 }
@@ -271,14 +303,14 @@ render(){
 
      return (  
         <Aux>
-              <Navibar dropDowns={DROPDOWNS} changePageHandler={this.changePageHandler} showBackDrop={this.state.showBackDrop} showSideBar={this.state.showSideBar} toggleBackDropHandler={this.toggleBackDropHandler}/>
+              <Navibar dropDowns={this.state.DROPDOWNS} changePageHandler={this.changePageHandler} showBackDrop={this.state.showBackDrop} showSideBar={this.state.showSideBar} toggleBackDropHandler={this.toggleBackDropHandler}/>
             <main className={classes.Layout}>
             {this.state.pages.map( item => {
             if(item.show){
               if(item.solution){
                   /*if(item.output === -1){return <Home allInfo={DROPDOWNS} changePageHandler={this.changePageHandler}/>}
                   else{*/
-                  return <SolutionsController key ={item.name} allInfo={DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />/*}*/
+                  return <SolutionsController key ={item.name} allInfo={this.state.DROPDOWNS} index = {item.output} changePageHandler={this.changePageHandler} />/*}*/
               }
               else{
             return(item.output );}}
@@ -286,7 +318,7 @@ render(){
         }
         )}
             </main>  
-            <Footer changePageHandler={this.changePageHandler} dropDowns={DROPDOWNS}></Footer>
+            <Footer changePageHandler={this.changePageHandler} dropDowns={this.state.DROPDOWNS}></Footer>
           </Aux>);
           
 }
